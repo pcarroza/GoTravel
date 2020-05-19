@@ -2,7 +2,7 @@ package gotravel.options;
 
 import gotravel.models.Telefono;
 import gotravel.terminal.Terminal;
-import gotravel.utils.DialogoIntegerLimitado;
+import gotravel.utils.LimitedIntegerDialog;
 
 public class Menu {
 
@@ -36,7 +36,7 @@ public class Menu {
     }
 
     public Telefono getOpcion() {
-        int index = new DialogoIntegerLimitado("Ingrese Opción: ", LIMITE_INFERIOR, LIMITE_SUPERIOR).read();
+        int index = new LimitedIntegerDialog("Ingrese Opción: ", LIMITE_INFERIOR, LIMITE_SUPERIOR).read();
         return arregloOpciones[index - 1].getPhone();
     }
 

@@ -2,21 +2,21 @@ package gotravel.utils;
 
 import gotravel.terminal.Terminal;
 
-public class DialogoIntegerLimitado {
+public class LimitedIntegerDialog {
 
     private ClosedInterval closedInterval;
     
-    private Terminal gestorIO;
+    private Terminal terminal;
     
     private String title;
 
-    public DialogoIntegerLimitado(String title, int minimun, int maximun) {
+    public LimitedIntegerDialog(String title, int minimun, int maximun) {
         closedInterval = new ClosedInterval(minimun, maximun);
-        gestorIO = new Terminal();
+        terminal = new Terminal();
         this.title = title;
     }
 
-    public DialogoIntegerLimitado(String title, int maximun) {
+    public LimitedIntegerDialog(String title, int maximun) {
         this(title, 1, maximun);
     }
 
@@ -25,10 +25,10 @@ public class DialogoIntegerLimitado {
         assert right == false;
         int value;
         do {
-            gestorIO.showMessageln(title + closedInterval);
-            value = gestorIO.inputInteger();
+            terminal.showMessageln(title + closedInterval);
+            value = terminal.inputInteger();
             if (!closedInterval.isInclued(value)) {
-                gestorIO.showMessageln("ERROR. EL VALOR DEBE ESTAR ENTRE " + closedInterval);
+                terminal.showMessageln("ERROR. EL VALOR DEBE ESTAR ENTRE " + closedInterval);
             } else {
                 right = true;
             }

@@ -8,7 +8,7 @@ import gotravel.controllers.SearchController;
 import gotravel.controllers.UpdateController;
 import gotravel.localcontroller.Constant;
 import gotravel.options.Menu;
-import gotravel.utils.DialogoIntegerLimitado;
+import gotravel.utils.LimitedIntegerDialog;
 
 public class View {
 
@@ -43,7 +43,7 @@ public class View {
     }
 
     public int getIndex() {
-        return new DialogoIntegerLimitado("Ingrese Opcion: ", Constant.LIMIT_MAXIMUN_OF_OPTIONS).read();
+        return new LimitedIntegerDialog("Ingrese Opcion: ", Constant.LIMIT_MAXIMUN_OF_OPTIONS).read();
     }
 
     public void showMenu() {

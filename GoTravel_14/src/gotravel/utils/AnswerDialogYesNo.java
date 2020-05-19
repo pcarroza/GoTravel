@@ -9,7 +9,7 @@ public class AnswerDialogYesNo {
     private ClosedInterval closedInterval;
 
     private AnswerDialogYesNo() {
-        closedInterval = new ClosedInterval(ARRAY_OF_POSSIBLE_ANSWERS.length - 1);
+        closedInterval = new ClosedInterval(0, ARRAY_OF_POSSIBLE_ANSWERS.length - 1);
     }
     
     public static AnswerDialogYesNo instance() {

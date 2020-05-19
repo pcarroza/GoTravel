@@ -2,13 +2,13 @@ package gotravel.utils;
 
 import gotravel.terminal.Terminal;
 
-public class DialogoStringLimitado {
+public class LimitedStringDialog {
     
     private Terminal terminal;
     
     private String title;
 
-    public DialogoStringLimitado(String title) {
+    public LimitedStringDialog(String title) {
         terminal = new Terminal();
         this.title = title;
     }

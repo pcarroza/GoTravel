@@ -6,7 +6,7 @@ public class ClosedInterval {
     
     private int maximum;
 
-    public ClosedInterval(int minimum, int maximunm) {
+    public ClosedInterval(int minimum, int maximum) {
         this.minimum = minimum;
         this.maximum = maximum;
     }
