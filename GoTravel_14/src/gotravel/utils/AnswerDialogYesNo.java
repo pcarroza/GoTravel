@@ -5,6 +5,12 @@ public class AnswerDialogYesNo {
     private static String[] ARRAY_OF_POSSIBLE_ANSWERS = {"Y", "y", "N", "n"};
     
     private static AnswerDialogYesNo answerDialogYesNo = null;
+
+    private ClosedInterval closedInterval;
+
+    private AnswerDialogYesNo() {
+        closedInterval = new ClosedInterval(ARRAY_OF_POSSIBLE_ANSWERS.length - 1);
+    }
     
     public static AnswerDialogYesNo instance() {
     	if (answerDialogYesNo == null) {
@@ -24,7 +30,7 @@ public class AnswerDialogYesNo {
             } else {
                 index = index + 1;
             }
-        } while (!found && new ClosedInterval(ARRAY_OF_POSSIBLE_ANSWERS.length).isInclued(index));
+        } while (!found && closedInterval.isInclued(index));
         return found;
     }
 

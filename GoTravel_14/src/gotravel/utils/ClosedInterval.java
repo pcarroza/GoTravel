@@ -2,25 +2,27 @@ package gotravel.utils;
 
 public class ClosedInterval {
 
-    private int minimun;
+    private int minimum;
     
-    private int maximun;
+    private int maximum;
 
-    public ClosedInterval(int minimun, int maximun) {
-        this.minimun = minimun;
-        this.maximun = maximun;
+    public ClosedInterval(int minimum, int maximunm) {
+        this.minimum = minimum;
+        this.maximum = maximum;
     }
     
-    public ClosedInterval(int maximun) {
-        this(1, maximun);
+    public ClosedInterval(int maximum) {
+        this(1, maximum);
     }
 
     public boolean isInclued(int value) {
-        return value >= minimun && value <= maximun; 
+        return value >= minimum && value <= maximum;
     }
 
     @Override
     public String toString() {
-        return "[" + minimun + " - " + maximun + "]:";
+        return "[" + minimum + " - " + maximum + "]:";
     }
 }
+
+
