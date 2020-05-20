@@ -12,7 +12,7 @@ public class Restorer extends OwnerManager {
         if (listaDepropietario.isEmpty()) {
             this.showMessage("REGISTRO VACIO");
         } else {
-            for (Propietario propietario : listaDepropietario) {
+            for (Owner propietario : listaDepropietario) {
                 if (propietario.isEquals(rut)) {
                     propietario.update();
                 } else {

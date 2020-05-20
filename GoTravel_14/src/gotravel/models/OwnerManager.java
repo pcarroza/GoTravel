@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class OwnerManager {
     
-    protected ArrayList<Propietario> listaDepropietario;
+    protected ArrayList<Owner> listaDepropietario;
     
     protected OwnerManager() {
         this.listaDepropietario = ListOwner.instance(); 
     }
     
-    public void append(Propietario owner) {
+    public void append(Owner owner) {
         assert owner != null; 
         listaDepropietario.add(owner); 
     }

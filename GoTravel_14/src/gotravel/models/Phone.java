@@ -2,13 +2,13 @@ package gotravel.models;
 
 import gotravel.terminal.Terminal;
 
-public abstract class Telefono {
+public abstract class Phone {
 
     protected String anexo;
     
     protected String title;
 
-    protected Telefono(String title) {
+    protected Phone(String title) {
         this.title = title;
         anexo = "+56";
     }

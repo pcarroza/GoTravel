@@ -2,7 +2,7 @@ package gotravel.utils;
 
 public class AnswerDialogYesNo {
     
-    private static String[] ARRAY_OF_POSSIBLE_ANSWERS = {"Y", "y", "N", "n"};
+    private static String[] ARRAY_OF_POSSIBLE_ANSWERS = {"y", "n", "Y", "N"};
     
     private static AnswerDialogYesNo answerDialogYesNo = null;
 

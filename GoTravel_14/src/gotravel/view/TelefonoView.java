@@ -1,6 +1,6 @@
 package gotravel.view;
 
-import gotravel.models.Telefono;
+import gotravel.models.Phone;
 import gotravel.options.Menu;
 import gotravel.options.OpcionTelefonoFijo;
 import gotravel.options.OpcionTelefonoMovil;
@@ -15,11 +15,11 @@ public class TelefonoView {
         menu = new Menu();
     }
 
-    public Telefono getPhone() {
+    public Phone getPhone() {
         return this.elegirTelefono();
     }
 
-    private Telefono elegirTelefono() {
+    private Phone elegirTelefono() {
         menu.agregarOpcion(new OpcionTelefonoFijo());
         menu.agregarOpcion(new OpcionTelefonoMovil());
         menu.mostrarOpcionesMenu();

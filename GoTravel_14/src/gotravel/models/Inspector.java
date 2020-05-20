@@ -12,7 +12,7 @@ public class Inspector extends OwnerManager {
         if (this.listaDepropietario.isEmpty()) {
             this.showMessage("REGISTRO VACIO");
         } else {
-            for (Propietario propietario : listaDepropietario) {
+            for (Owner propietario : listaDepropietario) {
                 if (propietario.isEquals(rut)) {
                     propietario.showInformacionPropietario();
                 } else {

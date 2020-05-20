@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class ListOwner {
 
-    private static ArrayList<Propietario> listOwner;
+    private static ArrayList<Owner> listOwner;
     
-    public static ArrayList<Propietario> instance() {
+    public static ArrayList<Owner> instance() {
         if (listOwner == null) {
             listOwner = new ArrayList<>(); 
         }

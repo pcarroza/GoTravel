@@ -2,14 +2,14 @@ package gotravel.localcontroller;
 
 import gotravel.controllers.AppendController;
 import gotravel.models.OwnerManager;
-import gotravel.models.Propietario;
-import gotravel.models.Telefono;
+import gotravel.models.Owner;
+import gotravel.models.Phone;
 import gotravel.view.TelefonoView;
 import gotravel.view.View;
 
 public class LocalAppendController extends LocalController implements AppendController {
 
-    private Propietario owner;
+    private Owner owner;
     
     private OwnerManager ownerManager;
 
@@ -18,9 +18,9 @@ public class LocalAppendController extends LocalController implements AppendCont
     }
 
     @Override
-    public void setNewOwner(Propietario newOwner) {
-        assert newOwner != null;
-        owner = newOwner;
+    public void setNewOwner(Owner owner) {
+        assert owner != null;
+        this.owner = owner;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class LocalAppendController extends LocalController implements AppendCont
     }
 
     @Override
-    public void appendOwnerPhone(Telefono phone) {
+    public void appendOwnerPhone(Phone phone) {
         assert phone != null;
         phone.setFono(new TelefonoView().getNumberPhone());
         owner.ingresarNumeroTelefono(phone);
@@ -54,8 +54,8 @@ public class LocalAppendController extends LocalController implements AppendCont
     }
 
     @Override
-    public void acept(View trevalReservationView) {
-        assert trevalReservationView != null; 
-        trevalReservationView.visit(this);
+    public void acept(View view) {
+        assert view != null;
+        view.visit(this);
     }
 }

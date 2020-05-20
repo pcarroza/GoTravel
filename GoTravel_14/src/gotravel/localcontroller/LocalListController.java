@@ -13,7 +13,7 @@ public class LocalListController extends LocalController implements ListControll
     }
 
     @Override
-    public void acept(View travelReservationView) {
-        travelReservationView.visit(this);
+    public void acept(View view) {
+        view.visit(this);
     }
 }

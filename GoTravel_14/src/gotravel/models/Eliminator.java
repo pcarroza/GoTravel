@@ -12,7 +12,7 @@ public class Eliminator extends OwnerManager {
         if (listaDepropietario.isEmpty()) {
             this.showMessage("REGISTRO VACIO");
         } else {
-            for (Propietario propietario : listaDepropietario) {
+            for (Owner propietario : listaDepropietario) {
                 if (propietario.isEquals(rut)) {
                     listaDepropietario.remove(propietario);
                     this.showMessage("EL REGISTRO HA SIDO ELIMINADO EXITOSAMENTE");

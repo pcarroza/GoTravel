@@ -13,7 +13,7 @@ public class LocalSearchController extends LocalController implements SearchCont
     }
 
     @Override
-    public void acept(View trevalReservationView) {
-        trevalReservationView.visit(this);
+    public void acept(View view) {
+        view.visit(this);
     }
 }

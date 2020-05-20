@@ -22,11 +22,14 @@ public class LocalStartController implements StartController {
     }
 
     public Controller getController(int index) {
-        return index < Constant.LIMIT_MAXIMUN_OF_OPTIONS ? arrayControllers.getController(index) : null;
+        if (index < Constant.LIMIT_MAXIMUN_OF_OPTIONS) {
+            return arrayControllers.getController(index);
+        }
+        return null;
     }
 
     @Override
-    public void acept(View aThis) {
+    public void acept(View view) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

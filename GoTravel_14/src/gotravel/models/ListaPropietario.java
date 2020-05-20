@@ -6,12 +6,12 @@ import gotravel.terminal.Terminal;
 
 public class ListaPropietario extends AbstractListOwner {
 
-    public ListaPropietario(ArrayList<Propietario> listaDepropietario) {
+    public ListaPropietario(ArrayList<Owner> listaDepropietario) {
         super(listaDepropietario);
     }
 
-    public void add(Propietario propietario) {
-        listaDepropietario.add(propietario);
+    public void add(Owner propietario) {
+        ownerList.add(propietario);
     }
     
     public void search(String rut) {
@@ -19,8 +19,8 @@ public class ListaPropietario extends AbstractListOwner {
     }
    
     @Override
-    public void showMenssageVoid(ArrayList<Propietario> listaPropietario) {
-        if (listaDepropietario.isEmpty()) {
+    public void showMenssageVoid(ArrayList<Owner> listaPropietario) {
+        if (ownerList.isEmpty()) {
             this.showMessage("REGISTRO VACIO");
         }
     }

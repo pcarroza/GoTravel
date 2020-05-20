@@ -1,6 +1,6 @@
 package gotravel.options;
 
-import gotravel.models.Telefono;
+import gotravel.models.Phone;
 import gotravel.models.TelefonoFijo;
 
 public class OpcionTelefonoFijo extends Option {
@@ -13,7 +13,7 @@ public class OpcionTelefonoFijo extends Option {
     }
     
     @Override
-    public Telefono getPhone() {
+    public Phone getPhone() {
         return telefonoFijo; 
     }
 }

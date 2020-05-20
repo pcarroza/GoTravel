@@ -6,15 +6,15 @@ import gotravel.terminal.Terminal;
 
 public abstract class AbstractListOwner {
 
-    protected ArrayList<Propietario> listaDepropietario;
+    protected ArrayList<Owner> ownerList;
 
-    protected AbstractListOwner(ArrayList<Propietario> listaDepropietario) {
-        this.listaDepropietario = listaDepropietario;
+    protected AbstractListOwner(ArrayList<Owner> ownerList) {
+        this.ownerList = ownerList;
     }
 
     public void showInformacionPropietario(String rut) {
-        showMenssageVoid(listaDepropietario);
-        listaDepropietario.forEach((propietario) -> {
+        showMenssageVoid(ownerList);
+        ownerList.forEach((propietario) -> {
             if (propietario.isEquals(rut)) {
                 propietario.showInformacionPropietario();
             } else {
@@ -24,10 +24,10 @@ public abstract class AbstractListOwner {
     }
 
     public void delete(String rut) {
-        showMenssageVoid(listaDepropietario);
-        for (Propietario propietario : listaDepropietario) {
+        showMenssageVoid(ownerList);
+        for (Owner propietario : ownerList) {
             if (propietario.isEquals(rut)) {
-                listaDepropietario.remove(propietario);
+                ownerList.remove(propietario);
                 this.showMessage("EL REGISTRO HA SIDO ELIMINADO EXITOSAMENTE");
                 break;
             } else {
@@ -37,8 +37,8 @@ public abstract class AbstractListOwner {
     }
 
     public void update(String rut) {
-        showMenssageVoid(listaDepropietario);
-        listaDepropietario.forEach((propietario) -> {
+        showMenssageVoid(ownerList);
+        ownerList.forEach((propietario) -> {
             if (propietario.isEquals(rut)) {
                 propietario.update();
             } else {
@@ -48,11 +48,11 @@ public abstract class AbstractListOwner {
     }
 
     public void listarPropietarios() {
-        showMenssageVoid(listaDepropietario);
-        listaDepropietario.forEach((propietario) -> propietario.showInformacionPropietario());
+        showMenssageVoid(ownerList);
+        ownerList.forEach((propietario) -> propietario.showInformacionPropietario());
     }
 
-    public abstract void showMenssageVoid(ArrayList<Propietario> listaPropietario);
+    public abstract void showMenssageVoid(ArrayList<Owner> listaPropietario);
 
     private void showMessage(String title) {
         Terminal gestorIO = new Terminal();

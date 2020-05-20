@@ -1,7 +1,7 @@
 package gotravel.view;
 
 import gotravel.controllers.AppendController;
-import gotravel.models.Propietario;
+import gotravel.models.Owner;
 
 public class PropietarioView {
     
@@ -18,7 +18,7 @@ public class PropietarioView {
     }
     
     public void appendInformationOwner() {
-        appendController.setNewOwner(new Propietario());
+        appendController.setNewOwner(new Owner());
         appendController.appendOwnerInformation(personaView.getOwnerInformation());
         appendController.appendOwnerAddress(formularioView.getAddress());
         appendController.appendOwnerPhone(formularioView.getPhone());

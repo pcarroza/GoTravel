@@ -1,6 +1,6 @@
 package gotravel.options;
 
-import gotravel.models.Telefono;
+import gotravel.models.Phone;
 import gotravel.terminal.Terminal;
 
 public abstract class Option {
@@ -15,5 +15,5 @@ public abstract class Option {
         new Terminal().showMessageln(title);
     }
     
-    public abstract Telefono getPhone();
+    public abstract Phone getPhone();
 }

@@ -1,11 +1,13 @@
 package gotravel.view;
 
-import gotravel.models.Telefono;
+import gotravel.models.Phone;
 
 public class FormularioView {
     
     private DireccionView direccionView;
+
     private TelefonoView telefonoView;
+
     private EmailView emailView;
     
     public FormularioView() {
@@ -18,7 +20,7 @@ public class FormularioView {
         return direccionView.getAddress();
     }
 
-    public Telefono getPhone() {
+    public Phone getPhone() {
         return telefonoView.getPhone(); 
     }
 

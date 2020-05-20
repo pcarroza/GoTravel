@@ -13,8 +13,8 @@ public class LocalDeleteController extends LocalController implements DeleteCont
     }
 
     @Override
-    public void acept(View trevalReservationView) {
-        trevalReservationView.visit(this);
+    public void acept(View view) {
+        view.visit(this);
     }
 }
 

@@ -18,6 +18,10 @@ public class ClosedInterval {
     public boolean isInclued(int value) {
         return value >= minimum && value <= maximum;
     }
+    
+    public boolean isOut(int value) {
+    	return value < minimum && value > maximum; 
+    }
 
     @Override
     public String toString() {

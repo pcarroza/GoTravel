@@ -4,6 +4,5 @@ import gotravel.view.View;
 
 public interface Controller {
 
-    public void acept(View travelReservationView);
-
+    public void acept(View view);
 }

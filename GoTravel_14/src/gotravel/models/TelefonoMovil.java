@@ -2,7 +2,7 @@ package gotravel.models;
 
 import gotravel.terminal.Terminal;
 
-public class TelefonoMovil extends Telefono {
+public class TelefonoMovil extends Phone {
 
     private String numeroTelefonoMovil;
 

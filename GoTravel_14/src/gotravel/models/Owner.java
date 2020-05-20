@@ -1,11 +1,11 @@
 package gotravel.models;
 
-public class Propietario extends Persona {
+public class Owner extends Person {
     
-    private Formulario formulario;
+    private Form formulario;
 
-    public Propietario() {
-        formulario = new Formulario();
+    public Owner() {
+        formulario = new Form();
     }
     
     public void ingresarInformacionPropietario(String[] ownerInformation) {
@@ -13,22 +13,22 @@ public class Propietario extends Persona {
     }
     
     public void ingresarInformacionDireccion(String[] formulario) {
-        this.formulario.ingresarDireccion(formulario);
+        this.formulario.appendAddress(formulario);
     }
     
-    public void ingresarNumeroTelefono(Telefono telefono) {
-        formulario.ingresarTelefono(telefono);
+    public void ingresarNumeroTelefono(Phone telefono) {
+        formulario.appendPhone(telefono);
     }
 
     public void ingresarEmail(String email) {
-        formulario.ingresarEmail(email);
+        formulario.appendEmail(email);
     }
     
     public void update() {
     }
 
     public boolean isEquals(String rut) {
-        return this.getRut().equals(rut); 
+        return this.getRUT().equals(rut);
     }
     
     public void showInformacionPropietario() {
