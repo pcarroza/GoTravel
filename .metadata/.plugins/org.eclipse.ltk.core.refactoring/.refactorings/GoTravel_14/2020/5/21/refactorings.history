@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;newOwner&apos; in &apos;gotravel.controllers.AppendController.setNewOwner(...)&apos; to &apos;owner&apos;&#x0D;&#x0A;- Original project: &apos;GoTravel_14&apos;&#x0D;&#x0A;- Original element: &apos;gotravel.controllers.AppendController.setNewOwner(Owner).newOwner&apos;&#x0D;&#x0A;- Renamed element: &apos;newOwner&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;newOwner&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;gotravel.controllers{AppendController.java[AppendController~setNewOwner~QOwner;@newOwner!187!200!193!200!QOwner;!0!true" name="owner" references="true" stamp="1589991911190" version="1.0"/>
+</session>
