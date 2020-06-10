@@ -15,12 +15,8 @@ public class ClosedInterval {
         this(1, maximum);
     }
 
-    public boolean isInclued(int value) {
+    public boolean isContained(int value) {
         return value >= minimum && value <= maximum;
-    }
-    
-    public boolean isOut(int value) {
-    	return value < minimum && value > maximum; 
     }
 
     @Override

@@ -19,18 +19,19 @@ public class AnswerDialogYesNo {
     	return answerDialogYesNo; 
     }
     
-    public boolean isIncludes(String character) {
+    public boolean isContained(String character) {
         assert character != null;
+        assert ARRAY_OF_POSSIBLE_ANSWERS.length == 4;
         boolean found = false;
         int index = 0;
-        assert found == false && index == 0;
+        assert !found && index == 0;
         do {
             if (ARRAY_OF_POSSIBLE_ANSWERS[index].equals(character)) {
                 found = true;
             } else {
                 index = index + 1;
             }
-        } while (!found && closedInterval.isInclued(index));
+        } while (!found && closedInterval.isContained(index));
         return found;
     }
 

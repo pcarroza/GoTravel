@@ -27,7 +27,7 @@ public class LimitedIntegerDialog {
         do {
             terminal.showMessageln(title + closedInterval);
             value = terminal.inputInteger();
-            if (!closedInterval.isInclued(value)) {
+            if (!closedInterval.isContained(value)) {
                 terminal.showMessageln("ERROR. EL VALOR DEBE ESTAR ENTRE " + closedInterval);
             } else {
                 right = true;

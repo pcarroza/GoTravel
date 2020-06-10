@@ -12,7 +12,7 @@ public class Logic {
     }
 
     public Controller getController(int index) {
-        assert new ClosedInterval(Constant.LIMIT_MAXIMUN_OF_OPTIONS).isInclued(index);
+        assert new ClosedInterval(Constant.LIMIT_MAXIMUN_OF_OPTIONS).isContained(index);
         return startController.getController(index);
     }
 }

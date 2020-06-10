@@ -19,7 +19,7 @@ public class ArrayControlles {
     
     public void append(LocalController controller) {
         assert controller != null;
-        assert closedInterval.isInclued(index);
+        assert closedInterval.isContained(index);
         controllers[index] = controller; 
         index = index + 1; 
         if (index > Constant.NUMBER_OF_CONTROLLERS) {
@@ -28,7 +28,7 @@ public class ArrayControlles {
     }
 
     public LocalController getController(int index) {
-        assert new ClosedInterval(Constant.LIMIT_MAXIMUN_OF_OPTIONS).isInclued(index);
+        assert new ClosedInterval(Constant.LIMIT_MAXIMUN_OF_OPTIONS).isContained(index);
         return controllers[index - 1];
     }
 }

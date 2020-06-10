@@ -19,7 +19,7 @@ public class LimitedStringDialog {
         do {
             terminal.showMessageln(title + "[Y | N]");
             answer = terminal.inputString();
-            right = AnswerDialogYesNo.instance().isIncludes(answer);
+            right = AnswerDialogYesNo.instance().isContained(answer);
             if (!right) {
                 terminal.showMessageln("ERROR. EL CARACTER DEBE SER" + " [Y | N]");
             }
